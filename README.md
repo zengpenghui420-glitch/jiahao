@@ -40,15 +40,14 @@ python3 -m http.server 8080
 
 ## GitHub Pages
 
-站点从 **`main` 分支仓库根目录 `/`** 发布。
+站点应从 **`main` 分支仓库根目录 `/`** 发布。代码已在 `main`。当前令牌没有 Pages 管理权限，站点还没打开，需要仓库管理员点一次：
 
-若 Pages 尚未打开，在仓库 Settings → Pages：
+1. 打开 https://github.com/zengpenghui420-glitch/jiahao/settings/pages
+2. Build and deployment → Source 选 **Deploy from a branch**
+3. Branch 选 **`main`**，文件夹选 **`/ (root)`**
+4. 点 **Save**
 
-1. Build and deployment 选 **Deploy from a branch**
-2. Branch 选 **`main`**，文件夹选 **`/ (root)`**
-3. Save
-
-生效后访问 https://zengpenghui420-glitch.github.io/jiahao/ 。
+生效后访问 https://zengpenghui420-glitch.github.io/jiahao/ 。仓库已包含 `.nojekyll`，不要改成 `/docs`。
 
 ## 码规则
 
