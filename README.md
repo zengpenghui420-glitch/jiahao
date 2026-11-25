@@ -13,9 +13,11 @@ https://zengpenghui420-glitch.github.io/jiahao/
 | 题目 | 18 题 · 五级自评（完全不像我 → 非常像我） |
 | 维度 | 滤镜表演欲 / 虚空用力 / 优越口吻 / 反差尴尬 / 独特执念 / 回血自嘲 |
 | 结果 | 嘉豪浓度 + 档位 + 主导维 + 六维雷达 + 锐评 + 自处/相处建议 |
-| 验证码 | `JH****`，每码 3 次；vault 键 `jiahao`；**不接 Mantle** |
-| 重新测试 | 清会话解锁 → 再弹码 → redeem（扣次） |
+| 订单号 | 小红书订单号，每单对 `jiahao` 最多 3 次。开始新一次扣 1 次；同一次里中途刷新、继续、结果刷新只 peek，不扣；再测才再扣。第 4 次拒绝，并留下本次结果 |
+| 已发出的码 | 仍走本页原来的 vault：`GET /get`、`POST /redeem`，主机 `https://snappy-tundra-7uesdvk.tmp.now`，键 `jiahao`。不接 Mantle。页面不宣传这套入口 |
+| 重新测试 | 订单号再扣 1 次。旧码仍是清会话后再提交（扣次） |
 | 查看上次 | 仅读本机缓存，不扣次 |
+| 说明 | 订单号只记次数和绑定，不能证明已经付款 |
 
 浓度：`round(clamp(mean(F, E, S, C, U, 100−R), 0, 100))`。R 为回血自嘲，高分降低浓度。
 
@@ -29,6 +31,7 @@ https://zengpenghui420-glitch.github.io/jiahao/
 - `.nojekyll` — GitHub Pages（跳过 Jekyll）
 - `CODES.md` — 验证码格式与规则（无可卖码）
 - `tools/mint.sh` — 指向仓库外 vault mint 的说明，只打印用法
+- `tools/order-unlock-mock.mjs` — 本地 mock，不连真实订单或已发出的码
 
 ## 本地预览
 
@@ -36,7 +39,7 @@ https://zengpenghui420-glitch.github.io/jiahao/
 python3 -m http.server 8080
 ```
 
-浏览器打开 http://127.0.0.1:8080/ 。未解锁会先看到验证码门禁；答完 18 题后出现浓度与雷达。
+浏览器打开 http://127.0.0.1:8080/ 。未解锁会先要求输入订单号；答完 18 题后出现浓度与雷达。
 
 ## GitHub Pages
 
